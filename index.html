@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" /> <!-- http part is the instructions to the internet explorer to use a specific rendering mode (in this case its to use the latest rendering engine available) -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /> <!-- this is to make the page responsive -->
+    <title>Usagi's Personal Portfolio</title>
+    <link rel="stylesheet" href="style.css"/> <!-- this connects the html file with the css file-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="images/logo.jpg" class="logo">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Skills</a></li>
+                    <li><a href="#">Portfolio</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-text">
+                <p>Professional Big-Back</p>
+                <h1>IYAAAAAAA! HAAA! <br><span>-Usagi</span></h1>
+            </div>
+        </div>
+    </div>
+    <!---------------------About Section--------------------->
+    <div class="about">
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="images/user.png" alt="Usagi's Image">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="subtitle" >About Usagi</h1>
+                    <p> Usagi (うさぎ) is one of the main characters in the Chiikawa manga and anime series. In the Chiikawa-verse, they are best friends with Chiikawa and Hachiware, known for their energetic personality and playful antics during their time together. </p>
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>Food Connoisseur </span><br>Immense Appitite</li>
+                            <li><span>Weeding</span><br>Level 2 Weeding License</li>
+                            <li ><span>Rock Collector</span><br>Has a rock collection</l i>
+                            <li ><span>Staring</span><br>Physically Immpossible to Close Eyes</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>Jan 2019 - Current </span><br>Being a fat ass</li>
+                            <li><span>Jan 2019 - Current </span><br>Being a bad ass</li>
+                            <li><span>2021 - Current</span><br>Weeding License Level 3</li>
+                            <li><span>2020 - 2021 </span><br>Weeding License Level 2</li>
+                            
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>2025</span><br>Head Empty No Thoughts</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<!---------------------Services--------------------->
+<div id="services">
+    <div class="container">
+        <h1 class="sub-title">Services</h1>
+        <div class="services-list">
+            <div>
+                <i class="fas fa-seedling"></i>
+                <h2>Weeding</h2>
+                <p>Chiikawas earn money from weeding and the higher the level the licsense, the more money the chiikawas earn.</p>
+                <a href="#">Learn More</a>
+            </div>
+            <div>
+                <i class="fas fa-bomb"></i>
+                <h2>Fighting</h2>
+                <p>Usagi's weapon is a long yellow staff with a crudly drawn picture of his face and the staff shoots fireworks out from the side.</p>
+                <a href="#">Learn More</a>
+            </div>
+            <div>
+                <i class="fas fa-carrot"></i>
+                <h2>Eating and Screaming</h2>
+                <p>Eating everything in sight and can finish something 100X its size. Screaming nonestop</p>
+                <a href="#">Learn More</a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- ---------------------Portfolio--------------------- -->
+ <div id="portfolio">
+    <div class="container">
+        <h1 class="subtitle">Usagi's Work</h1>
+        <div class="work-list">
+            <div class="work">
+                <img src="images\bigUsagi.jpg">
+                <div class="layer">
+                    <h3>Eating Big Things</h3>
+                    <p>Has eaten and finished many large things on his own. 
+                        See in episodes online</p>
+                        <a href="#"><i class="fas fa-external-link-alt"></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="images\magicalGirlUsagi.jpg">
+                <div class="layer">
+                    <h3>Being A Magical Girl</h3>
+                    <p>Usagi is also a magical gir.
+                        See in episodes online</p>
+                        <a href="#"><i class="fas fa-external-link-alt"></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="images\FightingUsagi.jpg">
+                <div class="layer">
+                    <h3>Fighting Monsters</h3>
+                    <p>Is a badass and fights monsters with his friends. 
+                        See in episodes online</p>
+                        <a href="#"><i class="fas fa-external-link-alt"></i></a>
+                </div>
+            </div>
+        </div>
+        <a href="#" class="btn">See More</a>
+    </div>    
+ </div>
+<!---------------------Contact--------------------->
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">Contact Usagi</h1>
+                <p>usagi.contact@example.com</p>
+                <p>(123) 456-7890</p>
+                <div class="social-icon">
+                    <a href="https://facebook.com/"><i class="fab fa-facebook"></i></a>
+                    <a href="https://x.com/chiikawa_pt_en?lang=en"><i class="fab fa-twitter-square"></i></a>
+                    <a href="https://www.instagram.com/chiikawa.official/?hl=en"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+            <div class="contact-right">
+                <form action="">
+                    <input type="text" name="Name" placeholder="Your Name" required>
+                    <input type="text" name="Email" placeholder="Your Email" required>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+    <script>
+
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+
+        function opentab(tabname) {
+
+            /*---------Removes the active link and tab---------*/
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link");
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab");
+            }
+            /*---------Adds the active link and tab---------*/
+            event.currentTarget.classList.add("active-link"); /* displays the color*/
+            document.getElementById(tabname).classList.add("active-tab"); /* displays the content*/
+
+        }
+
+    </script>
+     
+</body>
+</html>

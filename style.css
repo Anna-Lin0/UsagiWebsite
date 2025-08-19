@@ -1,0 +1,257 @@
+* { /* This is a universal selector*/
+    margin: 0;
+    padding: 0;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    box-sizing: border-box; /* this changes hwo the browser calcs the size of the element -- width includes content + padding + border*/
+}
+body { 
+    background: white; /*this is the color of the background*/
+    color: rgb(61, 31, 6); /*this is the color of the text (white)*/
+}
+#header {
+    width: 100%; /*First thing is to put in the width and height*/
+    height: 100vh;/* 1vh = 1% of the viewpoint height so 100vh is the full hight of the screen*/
+    background: url(images/background2.png);
+    background-size: 40%; /*this is to make the image cover the whole header*/
+    background-position: 80% center; 
+    background-repeat: no-repeat; 
+}
+.container {
+    padding: 10px 10%;
+}
+nav { /* this all moved all the menu items to the right side upper corner*/
+    display: flex; 
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.logo {
+    width: 150px;
+    height: auto; 
+}
+nav ul li{
+    display: inline-block;
+    list-style: none;
+    margin: 10px 20px;
+}
+nav ul li a {
+    color: rgb(61, 31, 6);
+    text-decoration: none;
+    font-size: 18px;
+    position: relative;
+}
+nav ul li a::after{ /* this creates the little blue line that appears when hovering (rn its not hovered so it will be at 0%*/
+    content: '';
+    width: 0%;
+    height: 3px;
+    background: lightskyblue;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: 0.5s; /* this gives it a cool animation :3*/
+}
+nav ul li a:hover::after{ /* after hovering turn width to 100%*/
+    width: 100%; 
+}
+.header-text {
+    margin-top: 20%; 
+    font-size: 30px;
+}
+.header-text h1 {
+    font-size: 60px;
+    margin-top: 20px;
+}
+.header-text h1 span {
+    color: lightskyblue;
+}
+
+/*-------------------About Section-------------------*/
+
+#about {
+    padding: 80px 0;
+    color: rgb(61, 31, 6);
+
+}
+.row {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.about-col-1 {
+    flex-basis: 35%;
+}
+.about-col-1 img {
+    width: 100%;
+    border-radius: 15px; /* this rounds the corners of the image*/
+    height: auto;
+}
+.about-col-2{
+    flex-basis: 60%;
+}
+.subtitle {
+    font-size: 60px;
+    font-weight: 600;
+    color: rgb(61, 31, 6);
+}
+.tab-titles {
+    display: flex;
+    margin: 20px 0 40px;   
+}
+.tab-links {
+    margin-right: 50px;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+    
+}
+.tab-links::after {
+    content: '';
+    width: 0;
+    height: 3px;
+    background: lightskyblue;
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    transition: 0.5s;
+}
+.tab-links.active-link::after {
+    width: 50%;
+}
+.tab-contents ul li {
+    list-style: none;
+    margin: 10px 0;
+    font-size: 16px;
+}
+.tab-contents ul li span {
+    color: lightskyblue;
+    font-size: 16px;
+}
+.tab-contents {
+    display: none; 
+}
+.tab-contents.active-tab {
+    display: block;
+}
+
+/*-------------------Servcies Section-------------------*/
+#services {
+    padding: 30px 0;
+}
+.services-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 40px;
+    margin-top: 20px;
+}
+.services-list div {
+    background: lightskyblue;
+    padding: 40px;
+    font-size: 13px;
+    font-weight: 300;
+    border-radius: 15px;
+    transition: background 0.5s, transform 0.5s; /* this gives it a slow animation when hovered*/
+}
+.services-list div i { /* this is for the icon (i)*/
+    font-size: 50px;
+    color: rgb(61, 31, 6);
+    margin-bottom: 30px;
+}
+.services-list div p {
+    font-size: 16px;
+}
+.services-list div h2 {
+    font-size: 30px;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+.services-list div a {
+    text-decoration: none;
+    color: rgb(61, 31, 6);
+    font-size: 12px;
+    margin-top: 20px;
+    display: inline-block;
+
+}
+.services-list div:hover{
+    background: #fbf2cc;
+    transform: translateY(-10px); /* this moves the boxes up when hovered*/
+}
+/*-------------------Portfolio Section-------------------*/
+#portfolio {
+    padding: 50px 0;
+}
+.work-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 40px;
+    margin-top: 50px;
+}
+.work {
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+}
+
+.work img {
+    width: 100%;
+    border-radius: 10px;
+    display: block;
+    transition: transform 0.5s; /* this gives it a slow animation when hovered*/
+}
+.layer {
+    width: 100%;
+    height: 0%;
+    background:linear-gradient(rgba(255, 255, 255, 0.6), #fbf2cc);
+    border-radius: 10px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+    display: flex;
+    align-self: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 40px;
+    text-align: center;
+    font-size: 14px;
+    transition: height 0.5s; /* this gives the transition that it will come from the height*/
+}
+.layer h3 {
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+.layer a {
+    margin: 20px auto 0 auto;
+    color: rgb(61, 31, 6);
+    text-decoration: none;
+    font-size: 18px;
+    line-height: 60px;
+    background: lightskyblue;
+    width: 120px;
+    height: 60px;
+    border-radius: 30px;
+    text-align: center; 
+}
+.work:hover img {
+    transform: scale(1.1); /*this triggers the images to zoon when hovered.*/
+}
+.work:hover .layer {
+    height: 100%; /* this triggers the layer to show when hovered*/
+}
+.btn {
+    display: block;
+    margin: 50px auto;
+    width: fit-content;
+    border: 3px solid lightskyblue;
+    padding: 14px 50px;
+    border-radius: 6px;
+    text-decoration: none;
+    color: rgb(61, 31, 6);
+    transition: background 0.5s;
+
+}
+.btn:hover {
+    background: lightskyblue;
+    color: white;
+}
